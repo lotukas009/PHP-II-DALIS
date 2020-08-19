@@ -10,7 +10,7 @@
 <body>
 <main>
     <h1>Jūratė <?php print 'yra PHP'; ?> asė</h1>
-    <p>Kuriu dinaminį turinį: Atidaryta <?php print date('Y-m-d H:i:s'); ?></p>
+    <p>Kuriu dinaminį turinį dabar: Atidaryta <?php print date('Y-m-d H:i:s'); ?></p>
 </main>
 </body>
 </html>
