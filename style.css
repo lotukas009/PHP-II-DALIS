@@ -6,15 +6,24 @@ section {
 }
 
 .drink {
-   background: url("/images/Wine-glass.jpg");
+    background: url("/images/Wine-glass.jpg");
     width: 100px;
     height: 100px;
     background-size: cover;
 }
 
 h2 {
-    /*font-size: 25px;*/
     font-weight: bold;
     color: brown;
     text-align: center;
+}
+
+.rows {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    align-items: center;
 }

@@ -1,10 +1,8 @@
 <?php
-$money = rand (0,15);
+$money = rand (0,30);
 $bokal_cost = 3;
 $bokal_num = floor($money/$bokal_cost);
 $total_cost = $bokal_num * $bokal_cost;
-$h2 = "Total: $total_cost Eur";
-$drinks_view = '';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,15 +11,27 @@ $drinks_view = '';
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alus</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/style.css"/>
 </head>
 <body>
 <section>
-    <?php for ($i = 1; $i <= $bokal_num; $i++): ?>
-        <div class="drink"></div>
-    <?php endfor; ?>
+    <div>
+        <?php for ($m = 3; $m <= $total_cost; $m += $bokal_cost): ?>
+        <div class="column">
+            <div>
+                <?php print "$m Eur"; ?>
+            </div>
+            <div class="rows">
+                <?php for ($i = $m; $i > 0; $i -= $bokal_cost): ?>
+                    <div class="drink"></div>
+                <?php endfor; ?>
+            </div>
+        </div>
+        <?php endfor; ?>
+    </div>
 </section>
-<h2><?php print $h2; ?></h2>
 </body>
 </html>
+
+
 
