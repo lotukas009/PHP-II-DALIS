@@ -13,9 +13,13 @@
         .container {
             min-height: 100vh;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             justify-content: center;
             align-items: center;
+        }
+
+        .container > div:first-child{
+            margin-right: 60px;
         }
 
         .bomb-content {
@@ -23,7 +27,13 @@
             width: <?php print 10 * date('s'); ?>px;
             height: <?php print 10 * date('s'); ?>px;
             background-size: cover;
-            align-items: center;
+        }
+
+        .explosion-content-00 {
+            background-image: url("https://lh3.googleusercontent.com/proxy/OX0tnlMigoMe0J_B1s-s-dUuIECqELwdeOiM5za6rX9rCkv6C0fkxUnCk5vlTK0FQxi8ctoXgPhSposyuKWl4Ufx684GFwzIAvE-t3Fy0K71DjpacSwm4g");
+            background-size: cover;
+            width: 200px;
+            height: 200px;
         }
 
         span {
@@ -36,9 +46,14 @@
     </style>
 </head>
 <body>
-<div class="container">
+<section class="container">
     <div class="bomb-content"></div>
     <span><?php print date('s'); ?></span>
-</div>
+    <div class="explosion-content-<?php print date('s'); ?>"></div>
+</section>
 </body>
-</html>
+</html
+
+
+
+
