@@ -5,17 +5,32 @@ section {
     justify-content:center;
 }
 
+
+h2 {
+    font-weight: bold;
+    color: brown;
+    text-align: center;
+}
+
 .drink {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+}
+
+.drink.full {
     background: url("/images/Wine-glass.jpg");
     width: 100px;
     height: 100px;
     background-size: cover;
 }
 
-h2 {
-    font-weight: bold;
-    color: brown;
-    text-align: center;
+.drink.empty {
+    background: url("/images/Wine-glass-empty.jpg");
+    width: 100px;
+    height: 100px;
+    background-size: cover;
 }
 
 .rows {
@@ -27,3 +42,12 @@ h2 {
     display: flex;
     align-items: center;
 }
+
+.column > div:first-child {
+    font-size: 20px;
+    color: #28c4b1;
+    font-weight: bold;
+}
+
+
+
