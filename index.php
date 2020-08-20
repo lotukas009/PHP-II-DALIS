@@ -3,6 +3,8 @@ $money = rand (3,27);
 $bokal_cost = 3;
 $bokal_num = floor($money/$bokal_cost);
 $total_cost = $bokal_num * $bokal_cost;
+$timestamp = time() + rand(20, 30) * 60; //sekundės
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,10 +18,11 @@ $total_cost = $bokal_num * $bokal_cost;
 <body>
 <section>
     <div>
-        <?php for ($m = 3; $m <= $total_cost; $m += $bokal_cost): ?>
+        <?php for ($m = 3; $m <= $total_cost; $m += $bokal_cost, $timestamp += rand(20, 30) * 60): ?>
         <div class="column">
             <div>
-                <?php print "$m Eur"; ?>
+                <span><?php print date('H:i', $timestamp); ?></span>
+                <span><?php print "$m Eur"; ?></span>
             </div>
             <div class="rows">
                 <?php for ($i = $m; $i > 0; $i -= $bokal_cost): ?>
