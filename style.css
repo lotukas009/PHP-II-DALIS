@@ -1,53 +1,8 @@
-section {
-    width: 80%;
-    margin: 50px auto;
-    display:flex;
-    justify-content:center;
-}
-
-
-h2 {
-    font-weight: bold;
-    color: brown;
-    text-align: center;
-}
-
-.drink {
-    width: 100px;
-    height: 100px;
+body{
+   background: url("https://i.pinimg.com/originals/25/5b/00/255b00b4616367492749bec806068b95.jpg");
+    height: 100vh;
     background-size: cover;
-    background-position: center;
+    background-repeat: no-repeat;
 }
-
-.drink.full {
-    background: url("/images/Wine-glass.jpg");
-    width: 100px;
-    height: 100px;
-    background-size: cover;
-}
-
-.drink.empty {
-    background: url("/images/Wine-glass-empty.jpg");
-    width: 100px;
-    height: 100px;
-    background-size: cover;
-}
-
-.rows {
-    display: flex;
-    flex-direction: row;
-}
-
-.column {
-    display: flex;
-    align-items: center;
-}
-
-.column > div:first-child {
-    font-size: 20px;
-    color: #28c4b1;
-    font-weight: bold;
-}
-
 
 
