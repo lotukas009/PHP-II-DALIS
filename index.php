@@ -1,22 +1,7 @@
 <?php
-/**
-// * Squares the number
-// * @param int $x number
-// * @return int squared number
-// */
-function square($x)
-{
-    return $x ** 2;
-}
-var_dump($_POST);
-
-
-if (isset($_POST['enterNumber']) && is_numeric($_POST['enterNumber'])) {
-    $answer = 'The result is following: ' . square($_POST['enterNumber']);
-} else {
-    $answer = 'Please enter the number';
-}
-
+$size = intval($_POST['slider'] ?? 30);
+$message = empty($_POST) ? "Press button" : $size;
+$img_src ='https://f0.pngfuel.com/png/836/695/girl-and-boy-illustration-png-clip-art-thumbnail.png'
 ?>
 
 <!DOCTYPE html>
@@ -31,14 +16,17 @@ if (isset($_POST['enterNumber']) && is_numeric($_POST['enterNumber'])) {
 <body>
 <main>
     <form method="POST">
-        <div><p>Number squared</p></div>
-        <div>
-            <label for="skaicius">Enter number:</label>
-            <input type="number" name="enterNumber" id="skaicius">
-            <button name="submit">Submit</button>
+        <div><p>Change the picture size with slider</p></div>
+        <div class="slider-box">
+            <label for="skaicius">Size</label>
+            <input class="slider" type="range" min="1" max="80" value="50" name="slider">
+            <div>
+                <button name="submit">Let's do it</button>
+            </div>
         </div>
         <div>
-          <p><?=$answer?></p>
+            <p><?= $message; ?></p>
+            <img class="picture" src="<?= $img_src; ?>" style="width: <?= $size; ?>em;">
         </div>
        </main>
 </body>
