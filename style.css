@@ -1,8 +1,26 @@
-body{
-   background: url("https://i.pinimg.com/originals/25/5b/00/255b00b4616367492749bec806068b95.jpg");
-    height: 100vh;
-    background-size: cover;
-    background-repeat: no-repeat;
+main {
+    margin: 0 auto;
+    width: 85%;
 }
 
+div {
+    margin:100px;
+    display: flex;
+    justify-content: center;
+
+}
+
+input, label, p{
+    padding: 5px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+button {
+    padding: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #20c997;
+    color: #586341;
+}
 
